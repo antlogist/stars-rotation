@@ -37,12 +37,18 @@ const testimonials = [
         const starsWrapper = document.createElement("div");
         starsWrapper.classList.add("stars-wrapper", "mt-5");
         while (star--) {
+            const starWrapper = document.createElement("div");
+            starWrapper.classList.add("star-wrapper");
+            
             const starIcon = document.createElement("i");
             starIcon.classList.add("fa", "fa-star", "star");
-            starsWrapper.appendChild(starIcon);
+            starWrapper.appendChild(starIcon);
+            
             const insideStar = document.createElement("i");
             insideStar.classList.add("fa", "fa-star", "inside-star");
-            starIcon.appendChild(insideStar);
+            starWrapper.appendChild(insideStar);
+            
+            starsWrapper.appendChild(starWrapper);
         }
         div.appendChild(starsWrapper);
         
@@ -70,7 +76,7 @@ const testimonials = [
                 item.classList.remove("d-none");
                 
                 // Animation
-                const stars = item.querySelectorAll(".star");
+                const stars = item.querySelectorAll(".star-wrapper");
                 let starsLength = stars.length;
                 
                 // Star appearing
