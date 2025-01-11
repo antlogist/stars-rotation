@@ -2,89 +2,79 @@ body {
     background-color: black;
 }
 
-#testimonials {
+#testimonialsEl {
     background-color: black;
 /*    width: 512px;*/
 /*    margin: 0 auto;*/
 }
 
-#testimonials .star-wrapper {
+#testimonialsEl .star-wrapper {
     position: relative;
     display: inline-block;
     margin: 0.15rem;
 }
 
-#testimonials .star-wrapper i.star {
+#testimonialsEl .star-wrapper i.star {
     font-size: 1.6rem;
     opacity: 0;
-    transition-duration: 0.5s;
+    transition: all 0.5s;
     color: coral;
     border-radius: 50%;
 }
 
-#testimonials .star-wrapper.active i.star {
+#testimonialsEl .star-wrapper.active i.star {
     opacity: 1;
     transform: rotateY(360deg);
-    transition-duration: 0.5s;
 }
 
-#testimonials .star-wrapper i.inside-star {
+#testimonialsEl .star-wrapper i.inside-star {
     position: absolute;
     font-size: 0;
     left: 50%;
     top: 50%;
     color: whitesmoke;
-    opacity: 1;
 }
 
-#testimonials .star-wrapper.active i.inside-star {
+#testimonialsEl .star-wrapper.active i.inside-star {
     font-size: 3.2rem;
     left: 0;
     top: 0;
     margin-left: -0.9rem;
     margin-top: -0.9rem;
-    transition-duration: 0.75s;
-    transition-delay: 0.25s;
+    transition: all 0.75s 0.25s;
     opacity: 0;
 }
 
-#testimonials .star-wrapper i.star:after {
+#testimonialsEl .star-wrapper i.star:after {
     content: "";
     position: absolute;
     width: 0;
     height: 0;
     left: 50%;
     top: 50%;
-    margin-left: 0;
-    margin-top: 0;
     background-color: white;
     border-radius: 50%;
-    opacity: 1;
     border: 0px solid coral;
 }
 
-#testimonials .star-wrapper.active i.star:after {
+#testimonialsEl .star-wrapper.active i.star:after {
     width: 150%;
     height: 150%;
     left: -25%;
     top: -25%;
-    margin-left: 0;
-    margin-top: 0;
     opacity: 0;
-    transition-duration: 0.85s;
-    transition-delay: 0.15s;
+    transition: all 0.85s 0.15s;
     transform: rotateY(360deg);
     border: 5px solid coral;
 }
 
-#testimonials p {
+#testimonialsEl p {
     font-size: 1.15rem;
     opacity: 0;
     color: white;
-    transition-duration: 0.5s;
+    transition: opacity 0.5s;
 }
 
-#testimonials p.active {
+#testimonialsEl p.active {
     opacity: 1;
-    transition-duration: 0.5s;
 }
